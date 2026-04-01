@@ -1,6 +1,6 @@
 library(RTMB)
 
-source("recdata.R")
+recdata <- read.csv("recdata.csv")
 
 par <- list(logRmax=0, logS50=0, logSigma=0)
 par <- unlist(par)
