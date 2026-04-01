@@ -19,8 +19,6 @@ f <- function(par)
   nll
 }
 
-obj <- MakeADFun(f, par)
+model <- MakeADFun(f, par)
 
-opt <- nlminb(obj$par, obj$fn, obj$gr)
-
-nlminb(par, f)
+fit <- nlminb(model$par, model$fn, model$gr)
